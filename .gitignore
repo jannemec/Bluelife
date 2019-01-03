@@ -1,0 +1,5 @@
+app/config/config.local.neon
+/temp/
+/sessions/
+/log/
+/webloader/

@@ -1,0 +1,107 @@
+php:       
+    date.timezone: Europe/Prague
+    session.save_path: %wwwDir%/sessions
+
+parameters:
+    # Nastavení doby po kterou se drží oprávnění
+    authorizatorCacheTimeout: 300
+    mail:
+        to: jannemec@centrum.cz
+        from: jannemec@centrum.cz
+    Framework:
+        iAmUsingBadHost: false
+        email: jannemec@centrum.cz
+
+latte:
+    xhtml: TRUE
+
+tracy:
+    email: jannemec@centrum.cz
+    maxLength: 2500
+
+session:
+    expiration: 14 days
+    autostart: true
+
+application:
+    errorPresenter: Error
+    mapping:
+        *: App\*Module\Presenters\*Presenter
+
+services:
+    router: App\RouterFactory::createRouter
+    cache: Nette\Caching\Cache(@cacheStorage)
+    wlCssFilter: WebLoader\Filter\CssUrlsFilter(%wwwDir%, '/cp')
+    lessFilter: WebLoader\Filter\LessFilter
+    jwlCssMinFilter: Joseki\Webloader\CssMinFilter
+    cssMin: Joseki\Webloader\CssMinFilter
+    jsMin: Joseki\Webloader\JsMinFilter
+
+extensions:
+    webloader: WebLoader\Nette\Extension
+    gettextLatteExtension: h4kuna\Gettext\DI\GettextLatteExtension
+
+gettextLatteExtension:
+    langs:
+        cs: cs_CZ.utf8
+        en: en_US.utf8
+
+webloader:
+    css:
+        cssPrint:
+            sourceDir: %wwwDir%/styles 
+            tempDir: %wwwDir%/webloader
+            tempPath: webloader
+            filters:
+                - @cssMin
+            fileFilters:
+                - @wlCssFilter
+            files:
+                - stylePrint.css
+
+        css:
+            sourceDir: %wwwDir%/styles 
+            tempDir: %wwwDir%/webloader
+            tempPath: webloader
+            filters:
+                - @cssMin
+            fileFilters:
+                - @wlCssFilter
+            files:
+                - style.css
+                - fontawesome/css/all.min.css
+                - pure/base-min.css
+                - pure/base-context-min.css
+                - pure/grids-core-min.css
+                - pure/grids-responsive-min.css
+                - pure/forms-min.css
+                - pure/forms-nr-min.css
+                - pure/tables-min.css
+                - pure/buttons-min.css
+                - pure/buttons-core-min.css
+                #- forms.css
+                - %wwwDir%/js/jquery-ui/jquery-ui.min.css
+                - %wwwDir%/js/jquery-ui/jquery-ui.theme.min.css
+    js:
+        js:
+            sourceDir: %wwwDir%/js 
+            tempDir: %wwwDir%/webloader
+            tempPath: webloader
+            attrs: 
+            files:
+                - netteForms.min.js
+                - nette.ajax.js
+                - extensions/confirm.ajax.js
+                - extensions/spinner.ajax.js
+                - extensions/scrollTo.ajax.js
+                #- history.ajax.js
+                - script.js
+                
+                
+        jQuery:
+            sourceDir: %wwwDir%/js 
+            tempDir: %wwwDir%/webloader
+            tempPath: webloader
+            files:
+                - jquery.min.js
+                - jquery-ui/jquery-ui.min.js

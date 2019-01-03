@@ -1,0 +1,166 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Casale Project intranet\n"
+"POT-Creation-Date: 2018-12-31 17:05+0100\n"
+"PO-Revision-Date: 2018-12-31 17:06+0100\n"
+"Last-Translator: Jan Němec <jan.nemec@otk.cz>\n"
+"Language-Team: \n"
+"Language: en_GB\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2\n"
+"X-Poedit-Basepath: ../../../temp/cache/latte\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: presenters-templates-@layout.latte--90b28c2369.php:46
+msgid "Modrý život"
+msgstr "Blue Life"
+
+#~ msgid "Úvod"
+#~ msgstr "Intro"
+
+#~ msgid "Úvodní stránka"
+#~ msgstr "Intro page"
+
+#~ msgid "Sharepoint Casale"
+#~ msgstr "Sharepoint Casale"
+
+#~ msgid "Sharepoint Project Portal"
+#~ msgstr "Sharepoint Project Portal"
+
+#~ msgid "OKbase"
+#~ msgstr "OKbase"
+
+#~ msgid "Docházkový systém"
+#~ msgstr "Docházkový systém"
+
+#~ msgid "IT Helpdesk"
+#~ msgstr "IT Helpdesk"
+
+#~ msgid "Struktura firmy"
+#~ msgstr "Company structure"
+
+#~ msgid "Firemní struktura"
+#~ msgstr "Company structure"
+
+#~ msgid "Seznam projektů"
+#~ msgstr "List of Projects"
+
+#~ msgid "Tools"
+#~ msgstr "Tools"
+
+#~ msgid "Import telefonů"
+#~ msgstr "Phones import"
+
+#~ msgid "Import telefonů Vodafone"
+#~ msgstr "Vodafone import phones"
+
+#~ msgid "OKBase kontrola"
+#~ msgstr "OKbase check"
+
+#~ msgid "Kontrola OKBase docházka"
+#~ msgstr "Check OKBase personal system"
+
+#~ msgid "Schema kanceláří"
+#~ msgstr "Office schema"
+
+#~ msgid "Zobrazení schématu kanceláří"
+#~ msgstr "Show the office schema"
+
+#~ msgid "Aktualizace projektů"
+#~ msgstr "Project refresh"
+
+#~ msgid "Aktualizace partnerů"
+#~ msgstr "Partners refresh"
+
+#~ msgid "Čtečka karet - převod"
+#~ msgstr "RFID reader - HEX"
+
+#~ msgid "Převod čísla na HEX"
+#~ msgstr "Translate HEX number"
+
+#~ msgid "PHPInfo"
+#~ msgstr "PHPInfo"
+
+#~ msgid "Informace o nastavení PHP"
+#~ msgstr "PHP settings"
+
+#~ msgid "Nette Info"
+#~ msgstr "Nette infos"
+
+#~ msgid "Informace o systému Nette"
+#~ msgstr "Nette infos"
+
+#~ msgid "Uživatel"
+#~ msgstr "User"
+
+#~ msgid "Informace o uživateli"
+#~ msgstr "User account info"
+
+#~ msgid "Uživatelé"
+#~ msgstr "Users"
+
+#~ msgid "Administrace uživatelů"
+#~ msgstr "Users administration"
+
+#~ msgid "Roles/skupiny"
+#~ msgstr "Roles/Groups"
+
+#~ msgid "Administrace rolí"
+#~ msgstr "Roles administration"
+
+#~ msgid "Rights/zdroje"
+#~ msgstr "Rights/sources"
+
+#~ msgid "PHPMyAdmin"
+#~ msgstr "PHPMyyAdmin"
+
+#~ msgid "MySQL database administrace"
+#~ msgstr "MySQL dbf administration"
+
+#~ msgid "!!TEST"
+#~ msgstr "!! TEST"
+
+#~ msgid "Only for Admin testing"
+#~ msgstr "Only for admin testing"
+
+#~ msgid "Telefonní seznam"
+#~ msgstr "Phone list"
+
+#~ msgid "Jméno"
+#~ msgstr "Name"
+
+#~ msgid "Tel"
+#~ msgstr "Phone"
+
+#~ msgid "Mobil"
+#~ msgstr "Mobile"
+
+#~ msgid "Email"
+#~ msgstr "Email"
+
+#~ msgid "Aktivní"
+#~ msgstr "Active"
+
+#~ msgid "projekty"
+#~ msgstr "projects"
+
+#~ msgid "veřejné"
+#~ msgstr "public"
+
+#~ msgid "heslo"
+#~ msgstr "password"
+
+#~ msgid "Design"
+#~ msgstr "Design"
+
+#~ msgid "1. patro"
+#~ msgstr "1st Floor"
+
+#~ msgid "2. patro"
+#~ msgstr "2nd Floor"
+
+#~ msgid "ZDE"
+#~ msgstr "HERE"
