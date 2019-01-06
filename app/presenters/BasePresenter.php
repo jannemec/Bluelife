@@ -7,25 +7,8 @@ use Nette;
 
 class BasePresenter extends Nette\Application\UI\Presenter {
     
-    /** @var \h4kuna\Gettext\GettextSetup */
-    protected $translator = null;
-
-    /**
-     * Inject translator
-     * @param $translator \h4kuna\Gettext\GettextSetup
-     */
-    public function injectTranslator(\h4kuna\Gettext\GettextSetup $translator) {
-        $this->translator = $translator;
-    }
     
-    /** 
-     * 
-     * @return \h4kuna\Gettext\GettextSetup 
-     */
-    public function getTranslator(): \h4kuna\Gettext\GettextSetup {
-        return($this->translator);
-    }
-
+    
     /**
      * Items of the menu [$link => [name, description], ...]
      * @var Array
@@ -57,7 +40,59 @@ class BasePresenter extends Nette\Application\UI\Presenter {
         return $template;
     }
 
+    public function isLogged():bool {
+        if ($this->user instanceOf NUser) {
+            return($this->user->isLoggedIn());
+        } else {
+            return(false);
+        }
+    }
+
+    //==========================================================================
+    // Translator
+    //==========================================================================
     
+    /** @var \h4kuna\Gettext\GettextSetup */
+    protected $translator = null;
+
+    /**
+     * Inject translator
+     * @param $translator \h4kuna\Gettext\GettextSetup
+     */
+    public function injectTranslator(\h4kuna\Gettext\GettextSetup $translator) {
+        $this->translator = $translator;
+    }
+    
+    /** 
+     * 
+     * @return \h4kuna\Gettext\GettextSetup 
+     */
+    public function getTranslator(): \h4kuna\Gettext\GettextSetup {
+        return($this->translator);
+    }
+
+    
+    //==========================================================================
+    // Lang
+    //==========================================================================
+    
+    /** @persistent */
+    public $lang;
+    
+    public $freePage = false;
+    public function isFreePage(): bool {
+        return($this->freePage);
+    }
+
+    public function actionSetLang(?string $lang = null, ?string $backlink = null): void {
+        $this->setLang($lang);
+        if (is_null($backlink)) {
+            $this->redirect('default');
+        } else {
+            $this->redirect($backlink);
+        }
+    }
+
     public function setLang(string $lang): void {
         $this->lang = $lang;
         // Uložení do session
@@ -78,36 +113,11 @@ class BasePresenter extends Nette\Application\UI\Presenter {
         }
         return($this->lang);
     }
-
-    public function isLogged():bool {
-        if ($this->user instanceOf NUser) {
-            return($this->user->isLoggedIn());
-        } else {
-            return(false);
-        }
-    }
-
-    /** @persistent */
-    public $lang;
-    
-    public $freePage = false;
-    public function isFreePage(): bool {
-        return($this->freePage);
-    }
-
-    public function actionSetLang(?string $lang = null, ?string $backlink = null): void {
-        $this->setLang($lang);
-        if (is_null($backlink)) {
-            $this->redirect('default');
-        } else {
-            $this->redirect($backlink);
-        }
-    }
-
     
     
-    
-    
+    //==========================================================================
+    // Webloader
+    //==========================================================================
     
     /** @var \WebLoader\Nette\LoaderFactory @inject */
     public $webLoader;
@@ -131,5 +141,12 @@ class BasePresenter extends Nette\Application\UI\Presenter {
     protected function createComponentJQuery() {
         return $this->webLoader->createJavaScriptLoader('jQuery');
     }
-
+    
+    
+    //==========================================================================
+    // Twitter
+    //==========================================================================
+    protected function createComponentTwitterTimeLine() {
+        
+    }
 }

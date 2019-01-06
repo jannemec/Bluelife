@@ -7,4 +7,5 @@ use Nette;
 
 class HomepagePresenter extends BasePresenter {
 
+    
 }

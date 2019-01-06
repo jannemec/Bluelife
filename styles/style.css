@@ -20,8 +20,11 @@ body,html {
 header {
     background: #AEC6CF;
     padding: 20px 30px;
-    max-width: 940px;
     margin: auto;
+}
+
+#logo a {
+    text-decoration: none;
 }
 nav {
     display: inline-block;
@@ -46,17 +49,13 @@ nav ul {
     list-style: none;
 }
 #pageContent {
-    max-width: 1000px;
     margin: auto;
     border: none;
 }
 main {
-	float: left;
-	width: 60%;
+    padding: 1ex 1em;
 }
 aside {
-	float: right;
-	width: 30%;
 }
 article {
     border-bottom: 2px dotted #999;
@@ -65,46 +64,66 @@ article {
 }
 article h2 {
     font-weight: normal;
-    margin-bottom: 12px;
+    margin-bottom: 2ex;
 }
 article p {
-	
+    margin-top: 2ex;
+    line-height: 3ex;
 }
 main section {
 	
 }
 footer {
 	background: #AEC6CF;
-	max-width: 1000px;
 	margin: auto;
 	clear: both;
-	text-align: right;
+	text-align: center;
+        padding: 20px;
 }
-footer p {
-	padding: 20px;
-}
-address {
-    padding: 10px 20px 30px 10px;
+footer address {
+    display: inline-block;
 }
 aside > div {
 	margin: 10px auto;
 	background: #AEC6CF;
-	min-height: 100px;
+	min-height: 50px;
+        padding: 1ex;
 }
+
+aside > h2 {
+    font-weight: normal;
+    margin-bottom: 2ex;
+}
+
+aside > div > h3 {
+    font-weight: normal;
+    margin-bottom: 1ex;
+}
+
 #logo {
-    display: inline-block;
+    display: block;
     vertical-align: middle;
     font-size: 30px;
     margin-right: 75px;
     color: #FFF;
+    float: left;
 }
 #logo img {
     width: 50px;
+    height: 50px;
     vertical-align: middle;
     margin-right: 10px;
 }
+
+header nav {
+    float: right;
+    display: block;
+}
+
+header {
+    min-hight: 100px;
+}
 body > section {
-    max-width: 1000px;
     margin: auto;
     padding: 30px 0px;
     border-bottom: 1px solid #999;

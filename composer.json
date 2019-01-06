@@ -29,7 +29,8 @@
 		"joseki/webloader-filters": "dev-master",
 		"oyejorge/less.php": "dev-master",
 		"h4kuna/gettext-latte": "dev-master",
-		"vojtech-dobes/nette-ajax-history": "dev-master"
+		"vojtech-dobes/nette-ajax-history": "dev-master",
+		"j7mbo/twitter-api-php": "dev-master"
 	},
 	"require-dev": {
 		"nette/tester": "^2.0"

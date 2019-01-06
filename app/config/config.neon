@@ -11,6 +11,11 @@ parameters:
     Framework:
         iAmUsingBadHost: false
         email: jannemec@centrum.cz
+    twitter:
+        Account: Vlk_Honzi
+        ConsumerKey: 6Ynf9whOguhOfel4mdpMQ
+        ConsumerSecret: aoxRqRtt1o8GPKRaMOiozvIEkAbmomi4lpGiaVgbM
+        Url: "https://api.twitter.com/1.1/statuses/user_timeline.json"
 
 latte:
     xhtml: TRUE
