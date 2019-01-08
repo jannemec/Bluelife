@@ -66,6 +66,11 @@ article h2 {
     font-weight: normal;
     margin-bottom: 2ex;
 }
+article h3 {
+    font-weight: normal;
+    margin-top: 2ex;
+    margin-bottom: 0ex;
+}
 article p {
     margin-top: 2ex;
     line-height: 3ex;

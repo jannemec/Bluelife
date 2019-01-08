@@ -13,8 +13,10 @@ parameters:
         email: jannemec@centrum.cz
     twitter:
         Account: Vlk_Honzi
-        ConsumerKey: 6Ynf9whOguhOfel4mdpMQ
-        ConsumerSecret: aoxRqRtt1o8GPKRaMOiozvIEkAbmomi4lpGiaVgbM
+        consumer_key: 6Ynf9whOguhOfel4mdpMQ
+        consumer_secret: aoxRqRtt1o8GPKRaMOiozvIEkAbmomi4lpGiaVgbM
+        oauth_access_token: 21758611-0NpAIk04nFCsKYFXO5hclCrntrc5IGbfai1qxwqXN
+        oauth_access_token_secret: 7EwRAukCQdaXcTjZ0i5VMyFkG8sFjaVbqhyoq3g
         Url: "https://api.twitter.com/1.1/statuses/user_timeline.json"
 
 latte:
@@ -41,6 +43,10 @@ services:
     jwlCssMinFilter: Joseki\Webloader\CssMinFilter
     cssMin: Joseki\Webloader\CssMinFilter
     jsMin: Joseki\Webloader\JsMinFilter
+    twitter: \TwitterAPIExchange(%twitter%)
+    nette.latteFactory:
+        setup:
+            - addFilter(null,[\Model\Filters(),loader])
 
 extensions:
     webloader: WebLoader\Nette\Extension

@@ -143,10 +143,5 @@ class BasePresenter extends Nette\Application\UI\Presenter {
     }
     
     
-    //==========================================================================
-    // Twitter
-    //==========================================================================
-    protected function createComponentTwitterTimeLine() {
-        
-    }
+    
 }

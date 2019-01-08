@@ -1,0 +1,7 @@
+{foreach $tweets as $tweet}
+    <div>
+        <h3>{if isset($tweet->user->profile_image_url_https) && !empty($tweet->user->profile_image_url_https)}<img src='{$tweet->user->profile_image_url_https}' />{/if}{$tweet->created_at_dt|dt}</h3>
+        <p>{$tweet->text}</p>
+    </div>
+    
+{/foreach}
